@@ -1,0 +1,45 @@
+{
+  "name": "Ubuntu: TensorFlow IO",
+  "image": "my-tfio-dev:latest",
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "BazelBuild.vscode-bazel",
+        "cschlosser.doxdocgen",
+        "streetsidesoftware.code-spell-checker",
+        "esbenp.prettier-vscode",
+        "aaron-bond.better-comments",
+        "shardulm94.trailing-spaces",
+        "ms-python.python",
+        "ms-python.black-formatter",
+        "ms-python.pylint",
+        "ms-python.mypy",
+        "ms-python.flake8",
+        "streetsidesoftware.code-spell-checker",
+        "wayou.vscode-todo-highlight",
+        "editorconfig.editorconfig",
+        "davidanson.vscode-markdownlint",
+        "eamodio.gitlens",
+        "redhat.vscode-yaml",
+        "redhat.vscode-ansible",
+        "adammaras.vscode-better-comments",
+        "bbenoist.vscode-autodocstring"
+      ],
+
+      "settings": {
+        "python.pythonPath": "/usr/bin/python3",
+        "python.formatting.provider": "black",
+        "python.linting.pylintEnabled": true,
+        "python.linting.mypyEnabled": true,
+        "python.linting.flake8Enabled": true,
+        "editor.codeLens": true,
+        "editor.formatOnSave": true,
+        "python.autoComplete.extraPaths": ["/workspace"],
+        "python.testing.pytestEnabled": true
+      }
+    }
+  }
+}

@@ -21,7 +21,8 @@ RUN curl -sSOL https://github.com/bazelbuild/bazelisk/releases/download/v1.11.0/
 ARG CONDA_OS=Linux
 
 # Miniconda - Python 3.7, 64-bit, x86, latest
-RUN curl -sL https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -o mconda-install.sh && \
+RUN apt-get update && apt-get install -y ca-certificates && update-ca-certificates
+RUN wget --no-check-certificate -q https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O mconda-install.sh && \
     bash -x mconda-install.sh -b -p miniconda && \
     rm mconda-install.sh
 
